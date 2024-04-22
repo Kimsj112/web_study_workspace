@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        radio
+        <!-- radio 버튼은 name속성을 같은 값으로 지정해야만 하나만 선택하게 만들 수 있다. -->
+        <!-- value는 서버에 데이터 전송 시 실질적으로 보내지는 값이다. -->
+        <!-- checked는 페이지 진입 시 기본으로 선택된다. -->
+        <div>
+          빨강 <input type="radio" name="color" value="red" checked /> 노랑
+          <input type="radio" name="color" value="yellow" />
+        </div>
+        <div>check box</div>
+        <div>
+          <label>
+            java : <input type="checkbox" name="lang" value="1" />
+          </label>
+        </div>
+        <div>
+          <label for="pyton">pyton : </label>
+          <input type="checkbox" name="lang" value="2" id="pyton" />
+        </div>
+        <div>JavaScript: <input type="checkbox" name="lang" value="3" /></div>
+
+        <div>hidden</div>
+        <!-- hidden은 사용자에게 입력받는것이 아니라 
+        개발자에게 필요한 값을 숨겨놓는 칸이다. -->
+        <input type="hidden" value="test" name="dev" />
+      </div>
+    </form>
+  </body>
+</html>

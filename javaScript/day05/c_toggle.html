@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example01</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* border: 1px solid black; */
+      }
+
+      header,
+      footer {
+        background-color: antiquewhite;
+        height: 20vh;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      main {
+        background-color: cadetblue;
+        height: 80vh;
+      }
+
+      nav {
+        background-color: brown;
+        height: 40px;
+
+        position: relative;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      li {
+        list-style-type: none;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+      }
+
+      .sub-menu {
+        border: 1px solid black;
+        width: 100px;
+        background-color: slategray;
+        position: absolute;
+        /*  */
+        top: 40px;
+        left: 20px;
+      }
+      .sub-menu--ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sub-menu--li {
+        font-weight: bold;
+        color: gold;
+      }
+
+      .none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="menu">Home</li>
+          <li class="menu">메뉴1</li>
+          <li class="menu">메뉴2</li>
+          <li class="menu">메뉴3</li>
+        </ul>
+        <article class="sub-menu none">
+          <ul class="sub-menu--ul">
+            <li class="sub-menu--li">메뉴1</li>
+            <li class="sub-menu--li">메뉴2</li>
+            <li class="sub-menu--li">메뉴3</li>
+            <li class="sub-menu--li">메뉴4</li>
+          </ul>
+        </article>
+      </nav>
+    </header>
+    <section class="side-main-container">
+      <aside></aside>
+      <main>
+        <section class="sec1"></section>
+        <section class="sec2"></section>
+      </main>
+    </section>
+    <footer></footer>
+    <script>
+      let $liList = document.querySelectorAll(".menu");
+      let $subMenu = document.querySelector(".sub-menu");
+
+      $liList[1].addEventListener("click", () => {
+        let classList = $subMenu.classList;
+
+        $subMenu.classList.toggle("none");
+
+        // if(classList.contains('none')){
+        //     $subMenu.classList.remove('none');
+        // }else{
+        //     $subMenu.classList.add('none');
+        // }
+      });
+    </script>
+  </body>
+</html>

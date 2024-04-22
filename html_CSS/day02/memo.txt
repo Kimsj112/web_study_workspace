@@ -1,0 +1,137 @@
+Box Model
+    HTML의 모든 요소는 일정한 영역을 차지하게 된다.
+    CSS에서는 이런 영역을 Box Model이라고 한다.
+
+박스 모델의 구성
+    margin : 바깥 여백 (테두리 밖의 여백)
+    border : 테두리
+    padding : 안쪽 여백 (컨텐츠와 테두리 사이의 여백)
+    contents : 컨텐츠의 영역 (블록요소는 width, heignt로 조절 가능)
+
+    인라인 요소의 박스 모델도 margin, border, padding 은 설정이 가능하지만
+    width, heignt를 사용할 수 없으므로 컨텐츠 영역의 크기 설정이 불가능하다.
+
+박스 모델의 css 속성
+    - contents
+    width : 너비;
+    heignt : 높이;
+
+    단위는 기본적으로는 px이며, 그 외에도 여러 단위가 존재한다.
+    인라인 요소는 설정이 불가능
+
+    - border
+      border : 굵기 모양 색상;
+
+    - padding
+      padding : 4방향;
+      padding : 상하 좌우;
+      padding : 상 좌우 하;
+      padding : 상 우 하 좌;
+
+    - margin
+      margin : 4방향;
+      margin : 상하 좌우;
+      margin : 상 좌우 하;
+      margin : 상 우 하 좌;
+
+      * 좌우 margin을 auto로 설정하면 해당 요소를 중앙에 배치할 수 있다.
+
+
+================================================================================
+
+ display 속성
+    display 속성은 HTML에서 요소를 어떻게 표시할지 결정한다.
+    HTML의 요소들은 기본적으로 display의 속성 값이 설정되어 있다.
+    블록 요소 -> display : block
+    인라인 요소 -> display : inline
+
+    우리가 직접 display 속성을 변경하면 인라인 요소를 블록으로 변경하는게 가능하다!
+
+display 속성의 기본 4가지 값
+    - none 
+      요소를 보이지 않게 설정한다.
+      단순히 투명해지는 것이 아니라 아예 사라지게 되므로 공간을 차지하지 않는다.
+
+    - block
+      블록 요소로 설정한다.
+
+    - inline
+      인라인 요소로 설정한다.
+
+    - inline-block
+      인라인 블록 요소로 설정한다.
+      인라인블록은 인라인과 블록의 특징을 섞어 놓은 요소이며, 인라인처럼 가로 배치가 가능하지만
+      블록처럼 컨텐츠의 width, heignt를 설정할 수 있다.
+      -> 내부는 block요소, 외부는 inline 요소의 특징을 갖는다.
+
+
+======================================================================================================
+
+레이아웃을 만들 때 사용하는 속성
+    1. float
+    2. display의 flex Box
+    3. grid
+
+flexbox
+  레이아웃을 만드는 하나의 방식
+  복잡하지 않게 유연하게 요소들의 크기와 순서를 정하여 배치할 수 있다.
+
+flex box의 구성
+  - flex container
+    레이아웃을 적용하여 배치하려는 요소들을 감싸고 있는 부모요소
+
+  - flex item
+    실질적으로 배치하려는 요소이며 flex container의 자식요소
+    자식 요소인 아이템은 여러 요소를 만들 수 있다.
+
+  - 주축 (main axis)
+    자식 요소가 배치되는 방향
+
+  - 교차축 (cross axis)
+    주축을 가로지르는 방향
+
+flex container 만들기
+    컨테이너로 사용할 부모 요소에 display : flex 속성을 지정한다.
+    display: flex;
+        justify-content: center; 주축을 정렬하는 속성 (가로) -> flex를 해서
+        align-items: center;  교차축을 정렬하는 속성 (세로)-> flex를 해서
+
+        display: flex;
+        flex-direction: column; (세로축으로 다시 만들어줌)
+            align-items: center; (주축 정렬-> 교차축 정렬 (가로))
+            justify-content: center; (교차축 정렬-> 주축 정렬(세로))
+
+flex container의 주요 속성
+  배치하려는 요소들의 전체 흐름, 정렬과 관련된 속성
+
+  - display
+    display : flex
+    컨테이너 지정하는 속성
+
+  - flex direction
+    flex direction : row | column;
+    주축의 방향을 지정하는 속성
+
+    1. row : 행 방향 (디폴트)
+    2. column : 열 방향 
+
+  - justify-content
+    컨테이너의 주축을 기준으로 아이템들을 정렬한다.
+
+    1. center : 중앙 정렬
+    2. space-between : 첫 아이템과 마지막 아이템을 컨테이너 양끝에 배치하고 나머지 아이템들은
+                        동일한 간격으로 정렬된다.
+    3. space-around : 모든 아이템을 동일한 간격으로 정렬한다.
+
+  - align-items
+    컨테이너의 교차축을 기준으로 정렬한다.
+    justify-conte와 속성값은 동일하다.
+
+  - flex-wrap
+    flex-wrap : nowrap | wrap;
+    컨테이너 내부의 요소들이 많거나 크기가 커서 컨테이너를 넘어가게 되었을 때
+    한 줄로 보여줄 것인지 여러줄로 보여줄 것인지 지정한다.
+
+    1. nowrap : 디폴트값, 줄바꿈 없이 한 줄로 배치한다.
+                만약 컨테이너의 크기가 작다면 각 아이템들이 크기를 줄여버린다.
+    2. wrap : 컨테이너의 크기가 작을 때 여러줄 배치를 한다.

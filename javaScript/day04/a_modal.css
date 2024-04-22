@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: antiquewhite;
+  height: 10vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header li {
+  margin: 10px;
+}
+
+main {
+  background-color: cornflowerblue;
+  height: 80vh;
+}
+
+footer {
+  background-color: black;
+  height: 10vh;
+}
+
+nav {
+  background-color: cadetblue;
+  width: 100%;
+}
+
+.login-menu {
+  cursor: pointer;
+}
+
+/* ============ */
+
+.modal-bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.x-box {
+  background-image: url("./icon/icon.png");
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.x-box:hover {
+  background-image: url("./icon/cancle-hover.png");
+}
+
+h1 {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.login-form {
+  padding: 40px 50px;
+}
+
+.login-btn-box {
+  margin-top: 20px;
+}
+
+button {
+  width: 100%;
+}

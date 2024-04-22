@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      div {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://www.naver.com" method="get">
+      <div>id : <input type="text" value="test" name="id" /></div>
+      <div>pw : <input type="password" name="password" /></div>
+      <div>date : <input type="date" /></div>
+      <!-- submit 버튼을 누르면 해당 form에 있는 모든 데이터를 action속성의 url로 전송한다. -->
+      <div><input type="submit" value="완료" /></div>
+      <div><input type="reset" value="리셋" /></div>
+      <!-- <div><input type="file" /></div> -->
+    </form>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        height: 100px;
+        background-color: tomato;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      footer {
+        height: 100px;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+      }
+
+      .footer__text-box {
+        text-align: center;
+      }
+
+      nav {
+        background-color: cornflowerblue;
+        height: 50%;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        font-size: 20px;
+        height: 100%;
+        align-items: center;
+      }
+
+      li {
+        margin: 0 10px;
+      }
+
+      .header__text-box {
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        /* ------- */
+        /* height: 500px; */
+        font-size: 30px;
+        color: white;
+      }
+
+      aside {
+        background-color: brown;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        background-color: gray;
+        width: calc(100% - 150px);
+      }
+
+      section {
+        background-color: blueviolet;
+        width: 500px;
+        margin: 20px auto;
+      }
+
+      .section01__article-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .section01__article {
+        background-color: skyblue;
+        width: 120px;
+        height: 75px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .section02__article-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .section02__article {
+        background-color: skyblue;
+        width: 180px;
+        height: 75px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header__text-box">header</div>
+      <nav>
+        <ul>
+          <li>nav 메뉴1</li>
+          <li>nav 메뉴2</li>
+          <li>nav 메뉴3</li>
+          <li>nav 메뉴4</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside>aside</aside>
+      <main>
+        <div class="main__text-box">main</div>
+        <div class="main__sec-wrap">
+          <section class="section01">
+            <div class="section01__text-box">section</div>
+            <div class="section01__article-wrap">
+              <article class="section01__article">article</article>
+              <article class="section01__article">article</article>
+              <article class="section01__article">article</article>
+            </div>
+          </section>
+          <section class="section02">
+            <div class="section02__text-box">section</div>
+            <div class="section02__article-wrap">
+              <article class="section02__article">article</article>
+              <article class="section02__article">article</article>
+              <article class="section02__article">article</article>
+              <article class="section02__article">article</article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer__text-box">footer</div>
+    </footer>
+  </body>
+</html>

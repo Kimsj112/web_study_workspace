@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .span__inline {
+        background-color: antiquewhite;
+        font-size: 20px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid red;
+
+        /* 인라인 요소는 컨텐츠 영역 크기 조절이 불가능 */
+        /* width: 200px; */
+
+        /* 인라인 요소는 line-height 속성으로 줄 간격을 조절할 수 있다. */
+        line-height: 100px;
+        /* 글자간 간격 조절 */
+        letter-spacing: 10px;
+      }
+
+      .span__block {
+        display: block;
+        /* display를 block으로 주면 요소가 블록요소로 변경된다. */
+        background-color: black;
+        color: white;
+        border: 1px solid blue;
+        font-size: 25px;
+        font-weight: bold;
+
+        width: 100px;
+        height: 100px;
+
+        margin: 10px auto;
+      }
+
+      .div__none {
+        background-color: aquamarine;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+
+        /* 단순히 안보이는 것이 아니라 차지하고 있던 영역까지 사라진다 */
+        display: none;
+        /* opacity: 0; */
+      }
+
+      .div__inline-block {
+        background-color: blueviolet;
+        border: 1px solid black;
+
+        /* 인라인 블록은 요소의 크기만큼만 영역을 차지하여 인라인 요소처럼 옆에 다른 요소가 올 수 있다. */
+        display: inline-block;
+
+        /* 블록 요소처럼 컨텐츠의 크기를 조절할 수 있다. */
+        width: 100px;
+        height: 100px;
+
+        /* 인라인 블록은 인라인과 동일하게 마진 auto로 중앙 정렬을 할 수 없다. */
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>display : inline</h1>
+    <!-- span{span$}*5 -->
+    <span class="span__inline">span1</span>
+    <span class="span__inline">span2</span>
+    <span class="span__inline">span3</span>
+    <span class="span__inline">span4</span>
+    <span class="span__inline">span5</span>
+
+    <h1>display : block</h1>
+    <!-- span.span__bolck{span$}*5 -->
+    <span class="span__block">span1</span>
+    <span class="span__block">span2</span>
+    <span class="span__block">span3</span>
+    <span class="span__block">span4</span>
+    <span class="span__block">span5</span>
+
+    <h1>display : none</h1>
+    <!-- div.div__none{div$}*5 -->
+    <div class="div__none">div1</div>
+    <div class="div__none">div2</div>
+    <div class="div__none">div3</div>
+    <div class="div__none">div4</div>
+    <div class="div__none">div5</div>
+
+    <h1>display : inline-block</h1>
+    <!-- div.div__inline-block{div$}*5 -->
+    <div class="div__inline-block">div1</div>
+    <div class="div__inline-block">div2</div>
+    <div class="div__inline-block">div3</div>
+    <div class="div__inline-block">div4</div>
+    <div class="div__inline-block">div5</div>
+  </body>
+</html>

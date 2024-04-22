@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      table {
+        margin: 50px auto;
+        width: 500px;
+        border-spacing: 0;
+      }
+
+      table th {
+        padding: 10px;
+        border-bottom: 1px solid #dbdbdb;
+        border-top: 2px solid #999999;
+        background-color: #fbfbfb;
+      }
+
+      table th:not(table th:last-child) {
+        border-right: 1px solid #dbdbdb;
+      }
+
+      table td {
+        border-bottom: 1px solid #dbdbdb;
+        padding: 15px 10px;
+      }
+
+      .check-btn {
+        display: block;
+        margin: 0px auto;
+      }
+    </style>
+    <script defer src="./e_check.js"></script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" name="" id="check-all" />
+          </th>
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성자</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" name="" class="check-btn" /></td>
+          <td>1</td>
+          <td>aaa</td>
+          <td>김철수</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" class="check-btn" /></td>
+          <td>2</td>
+          <td>bbb</td>
+          <td>신짱구</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" class="check-btn" /></td>
+          <td>3</td>
+          <td>ccc</td>
+          <td>이유리</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

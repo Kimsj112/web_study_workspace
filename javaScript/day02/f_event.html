@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <!-- 특정 이벤트를 처리하기 위해 onXXX속성을 사용한다.
+    onclick속성은 이 요소에 클릭이벤트가 발생하면 실행시킬 js함수를 지정한다.
+    이 때 이벤트를 처리하는 함수를 이벤트 핸들러라고 하며, 
+    특정 이벤트와 이벤트 핸들러를 연결하는 과정을 이벤트 바인딩 이라고 한다.-->
+    <button type="button" onclick="alert('클릭함!')">버튼1</button>
+    <button type="button" onclick="printMsg('버튼2 클릭!!!')">버튼2</button>
+
+    <script>
+      // 이벤트를 처리하는 함수를 이벤트 핸들러 라고 한다.
+      function printMsg(msg) {
+        console.log(msg);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: bisque;
+        border: 3px dashed brown;
+        width: 100px;
+        height: 100px;
+
+        /* margin-left: 50px;
+        margin-bottom: 20px; */
+
+        /* top, right, bottom, left 순으로 적용됨 */
+        margin: 0 0 20px 50px;
+
+        /* 테두리를 둥글게 만드는 속성
+        값이 커질수록 원에 가까워진다. */
+        /* border-radius: 20px; */
+
+        /* 50%를 사용하면 원으로 변경된다. */
+        border-radius: 50%;
+      }
+
+      .ele1 {
+        padding: 20px 0 0 0;
+      }
+
+      .ele2 {
+        /*      상하, 좌우 */
+        padding: 20px 5px;
+      }
+
+      .ele3 {
+        /* margin: 50px 400px; */
+        /*
+          margin을 잘 활용하면 요소를 가운데로 정렬할 수 있다.
+          좌우 여백을 auto로 설정하면 화면 크기와 상관없이
+          항상 좌우 여백을 균등하게 맞춰준다.
+          따라서 중앙에 요소를 배치하게 된다. 
+         */
+        margin: 50px auto;
+
+        /* 블록요소이기 때문에 내부의 텍스트를 정렬할 수 있다. */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div{컨텐츠 $}*10 -->
+    <div class="ele1">컨텐츠 1</div>
+    <div class="ele2">컨텐츠 2</div>
+    <div class="ele3">컨텐츠 3</div>
+    <div>컨텐츠 4</div>
+    <div>컨텐츠 5</div>
+    <div>컨텐츠 6</div>
+    <div>컨텐츠 7</div>
+    <div>컨텐츠 8</div>
+    <div>컨텐츠 9</div>
+    <div>컨텐츠 10</div>
+  </body>
+</html>

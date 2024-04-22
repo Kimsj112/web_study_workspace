@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        background-color: antiquewhite;
+        height: 300vh;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>스크롤 이벤트</h1>
+    </main>
+
+    <script>
+      let $main = document.querySelector("main");
+      let color = $main.style.backgroundColor;
+
+      console.log(window);
+      window.addEventListener("scroll", () => {
+        console.log("scroll~~");
+        console.log(window.scrollY);
+
+        let scroll = window.scrollY;
+        if (scroll > 1500) {
+          $main.style.backgroundColor = "gold";
+        } else if (scroll > 1500) {
+          $main.style.backgroundColor = "blue";
+        } else if (scroll > 500) {
+          $main.style.backgroundColor = "green";
+        } else {
+          $main.style.backgroundColor = color;
+        }
+      });
+    </script>
+  </body>
+</html>
